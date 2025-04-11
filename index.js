@@ -11,7 +11,7 @@ const port =5000;
 
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/newdb').then(()=>{
+mongoose.connect('mongodb+srv://newuser:1234@blogapp.p4hhvik.mongodb.net/newdb?retryWrites=true&w=majority&appName=blogapp').then(()=>{
     console.log("connected to mongoDb");
 }).catch((error)=>{
     console.log("Mogodb is failed to connect",error);
