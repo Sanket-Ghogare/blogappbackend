@@ -24,7 +24,7 @@ commentRouter.post('/newcomment',async(req ,res)=>{
 
 commentRouter.get('/getcomment',async(req,res)=>{
     try {
-        const comments=await comment.find();
+        const comments= await comment.find();
         res.json(comments);
     } catch (error) {
         console.error('Failed to fetch comment', error);
@@ -47,3 +47,5 @@ commentRouter.delete('/deletecomment/:id',async(req,res)=>{
 })
 
 export default commentRouter;
+
+

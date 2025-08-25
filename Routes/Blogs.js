@@ -112,6 +112,21 @@ blogRouter.get('/category/:id', async (req, res) => {
     }
   });
 
+  blogRouter.get("/user/:id", async(req,res,next)=>{
+    try{
+  const newid = req.params.id;
+  const post = await Blog.find({id:_id});
+  if(post){
+    res.json(post);
+
+  }else{
+    res.status(404).json({err0r:"edeed"})
+  }
+    }
+    catch(err){
+  res.status(200).json({err:"ededeeede"})
+    }
+  })
 
 blogRouter.delete('/delete/:id',authenticateUser,async(req , res)=>{
   try {
